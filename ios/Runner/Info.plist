@@ -12,6 +12,14 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>I need location</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>I need location</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>for screenshot purpose</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>I need location</string>
 	<key>CFBundleName</key>
 	<string>zekab_task</string>
 	<key>CFBundlePackageType</key>

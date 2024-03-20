@@ -105,13 +105,14 @@ class _CurrentDayWeatherState extends State<CurrentDayWeather> {
                     ),
                     RichText(
                         textAlign: TextAlign.center,
+                        maxLines: 1,
                         text: TextSpan(children: [
                           TextSpan(
                             text: data.current!.temperature2M
                                 .toString(),
-                            style: const TextStyle(
+                            style: TextStyle(
                               color: AppColors.whiteColor,
-                              fontSize: 170,
+                              fontSize: 130.sp,
                               fontWeight: FontWeight.w700,
                             ),
                           ),
@@ -125,6 +126,7 @@ class _CurrentDayWeatherState extends State<CurrentDayWeather> {
                             ),
                           ),
                         ])),
+                    SizedBox(height: 20.h,),
                     Text(
                       formattedDateTime.toString(),
                       textAlign: TextAlign.center,
@@ -134,6 +136,7 @@ class _CurrentDayWeatherState extends State<CurrentDayWeather> {
                         fontWeight: FontWeight.w700,
                       ),
                     ),
+                    SizedBox(height: 10.h,),
                     Container(
                       height: 100.h,
                       width: 1.sw,
@@ -212,13 +215,24 @@ class _CurrentDayWeatherState extends State<CurrentDayWeather> {
                                   ),
                                 );
                               },
-                              child: const Text(
-                                '7-Days Forecasts',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: AppColors.whiteColor,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w900,
+                              child: Container(
+                                height: 40,
+                                padding: EdgeInsets.all(5.sp),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12.r,),
+                                  border: Border.all(color: Colors.black)
+                                ),
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: const Text(
+                                    '7-Days Forecasts',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      color: AppColors.whiteColor,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w900,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
